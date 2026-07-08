@@ -1,6 +1,6 @@
 import express from 'express';
 import {
-    getDashboardSummary,
+    getSummary,
     getCategoryBreakdown,
     getMonthlyTrend,
 } from '../controllers/dashboardController.js';
@@ -10,7 +10,7 @@ const router = express.Router();
 
 router.use(protect);
 
-router.get('/summary', getDashboardSummary);
+router.get('/summary', getSummary);
 router.get('/breakdown', getCategoryBreakdown);
 router.get('/trend', getMonthlyTrend);
 
